@@ -4,12 +4,14 @@ namespace Cryptocop.Software.API.Models.Dtos
     {
         public int Id { get; set; }
 
-        public string ProductIdentifier { get; set; }
+        public string StreetName { get; set; }
 
-        public float Quantity { get; set; }
+        public string HouseNumber { get; set; }
 
-        public float UnitPrice { get; set; }
+        public string ZipCode { get; set; }
 
-        public float TotalPrice { get; set; }
+        public string Country { get; set; }
+
+        public string City { get; set; }
     }
 }
