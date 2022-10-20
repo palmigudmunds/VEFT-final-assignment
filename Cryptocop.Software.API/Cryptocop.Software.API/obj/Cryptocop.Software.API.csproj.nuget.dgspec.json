@@ -1,0 +1,296 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API/Cryptocop.Software.API.csproj": {}
+  },
+  "projects": {
+    "/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Models/Cryptocop.Software.API.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Models/Cryptocop.Software.API.Models.csproj",
+        "projectName": "Cryptocop.Software.API.Models",
+        "projectPath": "/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Models/Cryptocop.Software.API.Models.csproj",
+        "packagesPath": "/Users/PalmiGudmunds/.nuget/packages/",
+        "outputPath": "/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Models/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/PalmiGudmunds/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Repositories/Cryptocop.Software.API.Repositories.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Repositories/Cryptocop.Software.API.Repositories.csproj",
+        "projectName": "Cryptocop.Software.API.Repositories",
+        "projectPath": "/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Repositories/Cryptocop.Software.API.Repositories.csproj",
+        "packagesPath": "/Users/PalmiGudmunds/.nuget/packages/",
+        "outputPath": "/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Repositories/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/PalmiGudmunds/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Models/Cryptocop.Software.API.Models.csproj": {
+                "projectPath": "/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Models/Cryptocop.Software.API.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Cryptography.KeyDerivation": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Services/Cryptocop.Software.API.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Services/Cryptocop.Software.API.Services.csproj",
+        "projectName": "Cryptocop.Software.API.Services",
+        "projectPath": "/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Services/Cryptocop.Software.API.Services.csproj",
+        "packagesPath": "/Users/PalmiGudmunds/.nuget/packages/",
+        "outputPath": "/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Services/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/PalmiGudmunds/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Models/Cryptocop.Software.API.Models.csproj": {
+                "projectPath": "/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Models/Cryptocop.Software.API.Models.csproj"
+              },
+              "/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Repositories/Cryptocop.Software.API.Repositories.csproj": {
+                "projectPath": "/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Repositories/Cryptocop.Software.API.Repositories.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Cryptography.KeyDerivation": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.23.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.23.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API/Cryptocop.Software.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API/Cryptocop.Software.API.csproj",
+        "projectName": "Cryptocop.Software.API",
+        "projectPath": "/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API/Cryptocop.Software.API.csproj",
+        "packagesPath": "/Users/PalmiGudmunds/.nuget/packages/",
+        "outputPath": "/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/PalmiGudmunds/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Models/Cryptocop.Software.API.Models.csproj": {
+                "projectPath": "/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Models/Cryptocop.Software.API.Models.csproj"
+              },
+              "/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Repositories/Cryptocop.Software.API.Repositories.csproj": {
+                "projectPath": "/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Repositories/Cryptocop.Software.API.Repositories.csproj"
+              },
+              "/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Services/Cryptocop.Software.API.Services.csproj": {
+                "projectPath": "/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Services/Cryptocop.Software.API.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
