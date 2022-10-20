@@ -1,0 +1,15 @@
+/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Repositories/bin/Debug/net6.0/Cryptocop.Software.API.Repositories.deps.json
+/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Repositories/bin/Debug/net6.0/Cryptocop.Software.API.Repositories.dll
+/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Repositories/bin/Debug/net6.0/Cryptocop.Software.API.Repositories.pdb
+/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Repositories/bin/Debug/net6.0/Cryptocop.Software.API.Models.dll
+/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Repositories/bin/Debug/net6.0/Cryptocop.Software.API.Models.pdb
+/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Repositories/obj/Debug/net6.0/Cryptocop.Software.API.Repositories.csproj.AssemblyReference.cache
+/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Repositories/obj/Debug/net6.0/Cryptocop.Software.API.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Repositories/obj/Debug/net6.0/Cryptocop.Software.API.Repositories.AssemblyInfoInputs.cache
+/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Repositories/obj/Debug/net6.0/Cryptocop.Software.API.Repositories.AssemblyInfo.cs
+/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Repositories/obj/Debug/net6.0/Cryptocop.Software.API.Repositories.csproj.CoreCompileInputs.cache
+/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Repositories/obj/Debug/net6.0/Cryptocop.Software.API.Repositories.csproj.CopyComplete
+/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Repositories/obj/Debug/net6.0/Cryptocop.Software.API.Repositories.dll
+/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Repositories/obj/Debug/net6.0/refint/Cryptocop.Software.API.Repositories.dll
+/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Repositories/obj/Debug/net6.0/Cryptocop.Software.API.Repositories.pdb
+/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Repositories/obj/Debug/net6.0/ref/Cryptocop.Software.API.Repositories.dll

@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Cryptocop.Software.API.Models.InputModels
 {
     public class AddressInputModel

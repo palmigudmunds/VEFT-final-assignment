@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Cryptocop.Software.API.Models/1.0.0": {
+        "runtime": {
+          "Cryptocop.Software.API.Models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Cryptocop.Software.API.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

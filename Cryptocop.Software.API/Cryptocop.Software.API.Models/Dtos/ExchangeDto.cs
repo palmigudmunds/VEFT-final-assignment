@@ -1,3 +1,5 @@
+using System;
+
 namespace Cryptocop.Software.API.Models.Dtos
 {
     public class ExchangeDto
@@ -12,6 +14,6 @@ namespace Cryptocop.Software.API.Models.Dtos
 
         public float? PriceInUsd { get; set; } = null!;
 
-        public datetime? LastTrade { get; set; } = null!;
+        public DateTime? LastTrade { get; set; } = null!;
     }
 }

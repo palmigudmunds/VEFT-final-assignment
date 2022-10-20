@@ -1,0 +1,12 @@
+/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Models/obj/Debug/net6.0/Cryptocop.Software.API.Models.csproj.AssemblyReference.cache
+/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Models/obj/Debug/net6.0/Cryptocop.Software.API.Models.GeneratedMSBuildEditorConfig.editorconfig
+/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Models/obj/Debug/net6.0/Cryptocop.Software.API.Models.AssemblyInfoInputs.cache
+/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Models/obj/Debug/net6.0/Cryptocop.Software.API.Models.AssemblyInfo.cs
+/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Models/obj/Debug/net6.0/Cryptocop.Software.API.Models.csproj.CoreCompileInputs.cache
+/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Models/bin/Debug/net6.0/Cryptocop.Software.API.Models.deps.json
+/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Models/bin/Debug/net6.0/Cryptocop.Software.API.Models.dll
+/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Models/bin/Debug/net6.0/Cryptocop.Software.API.Models.pdb
+/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Models/obj/Debug/net6.0/Cryptocop.Software.API.Models.dll
+/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Models/obj/Debug/net6.0/refint/Cryptocop.Software.API.Models.dll
+/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Models/obj/Debug/net6.0/Cryptocop.Software.API.Models.pdb
+/Users/PalmiGudmunds/Desktop/VEFT/HR-VEFT-FinalAssignment/Cryptocop.Software.API/Cryptocop.Software.API.Models/obj/Debug/net6.0/ref/Cryptocop.Software.API.Models.dll
