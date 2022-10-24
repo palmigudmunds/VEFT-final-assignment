@@ -14,5 +14,7 @@ public class PaymentCard
 
     public int Year { get; set; }
 
+    // Navigation properties
+
     public User User { get; set; }
 }

@@ -14,5 +14,7 @@ public class OrderItem
 
     public float TotalPrice { get; set; }
 
+    // Navigation properties
+
     public Order Order { get; set; }
 }

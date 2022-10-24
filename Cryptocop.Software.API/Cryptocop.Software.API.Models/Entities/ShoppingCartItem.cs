@@ -12,6 +12,8 @@ namespace Cryptocop.Software.API.Models.Entities
 
         public float UnitPrice { get; set; }
 
+        // Navigation properties
+
         public ShoppingCart ShoppingCart { get; set; }
     }
 }

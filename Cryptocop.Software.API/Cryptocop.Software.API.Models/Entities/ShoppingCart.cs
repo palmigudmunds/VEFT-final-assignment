@@ -8,6 +8,8 @@ public class ShoppingCart
 
     public int UserId { get; set; }
 
+    // Navigation properties
+
     public User User { get; set; }
 
     public ICollection<ShoppingCartItem> ShoppingCartItems { get; set; }

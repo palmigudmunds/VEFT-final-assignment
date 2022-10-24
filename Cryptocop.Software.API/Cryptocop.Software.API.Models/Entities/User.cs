@@ -12,6 +12,8 @@ public class User
 
     public string HashedPassword { get; set; }
 
+    // Navigation properties
+
     public ShoppingCart? ShoppingCart { get; set; } = null;
 
     public ICollection<PaymentCard>? PaymentCards { get; set; } = null;

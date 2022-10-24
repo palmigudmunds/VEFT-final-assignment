@@ -30,6 +30,8 @@ public class Order
 
     public float TotalPrice { get; set; }
 
+    // Navigation properties
+
     public ICollection<OrderItem>? OrderItems { get; set; }
 
     public User User { get; set; }
