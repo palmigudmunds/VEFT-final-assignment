@@ -4,19 +4,18 @@ namespace Cryptocop.Software.API.Models.InputModels
 {
     public class PaymentCardInputModel
     {
-        [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 3)]
-        [Display(Name = "Cardholder name")]
+        [Required(ErrorMessage = "Cardholder name is required.")]
+        [MinLength(3, ErrorMessage = "Cardholder name must be at least 3 characters long.")]
         public string CardholderName { get; set; }
 
-        [Required]
-        [CreditCard]
+        [Required(ErrorMessage = "Card number is required.")]
+        [CreditCard(ErrorMessage = "Invalid credit card number.")]
         public string CardNumber { get; set; }
 
-        [Range(1, 12)]
+        [Range(1, 12, ErrorMessage = "Month must be a number between 1 and 12.")]
         public int Month { get; set; }
 
-        [Range(0, 99)]
+        [Range(0, 99, ErrorMessage = "Year must be a number between 0 and 99.")]
         public int Year { get; set; }
     }
 }

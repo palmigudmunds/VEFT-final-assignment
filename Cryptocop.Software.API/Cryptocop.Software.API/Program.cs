@@ -15,11 +15,14 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddTransient<IAddressService, AddressService>();
 builder.Services.AddTransient<IAccountService, AccountService>();
 builder.Services.AddTransient<IJwtTokenService, JwtTokenService>();
-builder.Services.AddTransient<ICryptoCurrencyService, CryptoCurrencyService>();
 builder.Services.AddTransient<IExchangeService, ExchangeService>();
 builder.Services.AddTransient<IOrderService, OrderService>();
 builder.Services.AddTransient<IPaymentService, PaymentService>();
 builder.Services.AddTransient<IShoppingCartService, ShoppingCartService>();
+
+builder.Services.AddHttpClient<ICryptoCurrencyService, CryptoCurrencyService>(client => {
+    client.BaseAddress = new Uri(builder.Configuration.GetValue<string>("CryptoApiBaseUrl"));
+});
 
 var jwtConfig = builder.Configuration.GetSection("JwtConfig");
 builder.Services.AddTransient<ITokenService>((c) => new TokenService(
@@ -51,7 +54,7 @@ builder.Services.AddAuthentication(config => {
 builder.Services.AddScoped<IQueueService, QueueService>();
 builder.Services.Configure<ApiBehaviorOptions>(options =>
 {
-    options.SuppressModelStateInvalidFilter = true;
+    options.SuppressModelStateInvalidFilter = false;
 });
 builder.Services.AddControllers().AddJsonOptions(options => {
     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;

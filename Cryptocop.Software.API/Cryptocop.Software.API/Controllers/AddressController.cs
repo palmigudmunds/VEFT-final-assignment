@@ -34,7 +34,7 @@ namespace Cryptocop.Software.API.Controllers
         }
 
         [HttpDelete]
-        [Route("")]
+        [Route("{addressId:int}")]
         public IActionResult DeleteAddress(int addressId)
         {
             _addressService.DeleteAddress(User.Identity.Name, addressId);

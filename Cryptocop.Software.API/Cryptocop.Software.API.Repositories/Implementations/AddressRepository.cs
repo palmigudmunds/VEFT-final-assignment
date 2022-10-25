@@ -56,7 +56,14 @@ namespace Cryptocop.Software.API.Repositories.Implementations
 
         public void DeleteAddress(string email, int addressId)
         {
-            throw new System.NotImplementedException();
+            var user = _dbContext.Users.FirstOrDefault(u => u.Email == email);
+            if (user == null) { throw new System.Exception("User with the email " + email +  " not found."); }
+
+            var entity = _dbContext.Addresses.FirstOrDefault(a => a.Id == addressId && a.UserId == user.Id);
+            if (entity == null) { throw new System.Exception("Address with id " + addressId + " not found for user with email " + email + "."); }
+
+            _dbContext.Addresses.Remove(entity);
+            _dbContext.SaveChanges();
         }
     }
 }
