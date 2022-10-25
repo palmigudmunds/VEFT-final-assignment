@@ -29,7 +29,7 @@ namespace Cryptocop.Software.API.Models.Dtos
 
         public string OrderDate { get; set; }
 
-        public string TotalPrice { get; set; }
+        public float TotalPrice { get; set; }
 
         public IEnumerable<OrderItemDto> OrderItems { get; set; }
     }

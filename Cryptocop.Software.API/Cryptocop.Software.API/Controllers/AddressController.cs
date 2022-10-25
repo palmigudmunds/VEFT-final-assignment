@@ -30,7 +30,7 @@ namespace Cryptocop.Software.API.Controllers
         public IActionResult AddAddress([FromBody] AddressInputModel address)
         {
             _addressService.AddAddress(User.Identity.Name, address);
-            return Ok(200);
+            return Ok(201);
         }
 
         [HttpDelete]

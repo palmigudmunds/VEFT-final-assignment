@@ -29,7 +29,7 @@ namespace Cryptocop.Software.API.Controllers
         public IActionResult AddPaymentCard([FromBody] PaymentCardInputModel paymentCard)
         {
             _paymentService.AddPaymentCard(User.Identity.Name, paymentCard);
-            return Ok(200);
+            return Ok(201);
         }
     }
 }
