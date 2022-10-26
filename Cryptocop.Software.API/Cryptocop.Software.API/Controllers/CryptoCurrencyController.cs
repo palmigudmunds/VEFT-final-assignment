@@ -1,8 +1,10 @@
 ﻿using Cryptocop.Software.API.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Cryptocop.Software.API.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/cryptocurrencies")]
     public class CryptoCurrencyController : ControllerBase
@@ -16,9 +18,11 @@ namespace Cryptocop.Software.API.Controllers
 
         [HttpGet]
         [Route("")]
-        public IActionResult GetAvailableCryptocurrencies()
+        public async Task<IActionResult> GetAvailableCryptocurrencies()
         {
-            return Ok(_cryptoCurrencyService.GetAvailableCryptocurrencies());
+            var response = await _cryptoCurrencyService.GetAvailableCryptocurrencies();
+
+            return Ok(response);
         }
     }
 }
