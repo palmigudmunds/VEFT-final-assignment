@@ -1,4 +1,5 @@
 using System;
+using System.Text.Json.Serialization;
 
 namespace Cryptocop.Software.API.Models.Dtos
 {
@@ -6,14 +7,14 @@ namespace Cryptocop.Software.API.Models.Dtos
     {
         public string Id { get; set; }
 
-        public string Name { get; set; }
+        public string Exchange_Name { get; set; }
 
-        public string Slug { get; set; }
+        public string Exchange_Slug { get; set; }
 
-        public string AssetSymbol { get; set; }
+        public string Base_Asset_Symbol { get; set; }
 
-        public float? PriceInUsd { get; set; } = null!;
+        public float? Price_Usd { get; set; } = null!;
 
-        public DateTime? LastTrade { get; set; } = null!;
+        public DateTime? Last_Trade_At { get; set; } = null!;
     }
 }

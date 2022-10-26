@@ -26,9 +26,9 @@ namespace Cryptocop.Software.API.Controllers
 
         [HttpPost]
         [Route("")]
-        public IActionResult AddCartItem([FromBody] ShoppingCartItemInputModel shoppingCartItem)
+        public async Task<IActionResult> AddCartItem([FromBody] ShoppingCartItemInputModel shoppingCartItem)
         {
-            _shoppingCartService.AddCartItem(User.Identity.Name, shoppingCartItem);
+            await _shoppingCartService.AddCartItem(User.Identity.Name, shoppingCartItem);
             return Ok(201);
         }
 

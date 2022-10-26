@@ -1,9 +1,12 @@
 ﻿using Cryptocop.Software.API.Models.Dtos;
 using Cryptocop.Software.API.Models.InputModels;
 using Cryptocop.Software.API.Repositories.Interfaces;
+using Cryptocop.Software.API.Services.Helpers;
+using Cryptocop.Software.API.Services.Helpers;
 using Cryptocop.Software.API.Services.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace Cryptocop.Software.API.Services.Implementations
@@ -12,11 +15,13 @@ namespace Cryptocop.Software.API.Services.Implementations
     {
         private readonly IShoppingCartRepository _shoppingCartRepository;
         private readonly ICryptoCurrencyService _cryptoCurrencyService;
+        private HttpClient _httpClient;
 
-        public ShoppingCartService(IShoppingCartRepository shoppingCartRepository, ICryptoCurrencyService cryptoCurrencyService)
+        public ShoppingCartService(IShoppingCartRepository shoppingCartRepository, ICryptoCurrencyService cryptoCurrencyService, HttpClient httpClient)
         {
             _shoppingCartRepository = shoppingCartRepository;
             _cryptoCurrencyService = cryptoCurrencyService;
+            _httpClient = httpClient;
         }
         public IEnumerable<ShoppingCartItemDto> GetCartItems(string email)
         {
@@ -24,15 +29,24 @@ namespace Cryptocop.Software.API.Services.Implementations
         }
 
         public async Task AddCartItem(string email, ShoppingCartItemInputModel shoppingCartItem)
-        {
-            float tempPriceInUsd = 3_000.5F;
+        {   
+
+            var symbol = shoppingCartItem.ProductIdentifier.ToUpper();
+
+            bool isValidProductIdentifier = false;
+            if (symbol == "BTC" || symbol == "ETH" || symbol == "USDT" || symbol == "XMR")
+            {
+                isValidProductIdentifier = true;
+            }
+            if (!isValidProductIdentifier)
+            {
+                throw new System.Exception("Invalid product identifier");
+            }
             
-            // var cryptocurrencies = await _cryptoCurrencyService.GetAvailableCryptocurrencies();
-            // float priceInUsd = 0.0f;
-            // priceInUsd = cryptocurrencies.Where(cc => cc.Symbol == shoppingCartItem.ProductIdentifier).FirstOrDefault().Price_Usd;
-            // if (priceInUsd == 0.0) { throw new System.Exception("Product identifier not valid."); }
-            
-            _shoppingCartRepository.AddCartItem(email, shoppingCartItem, tempPriceInUsd);
+            var response = await _httpClient.GetAsync("https://data.messari.io/api/v1/assets/" + symbol + "/metrics?fields=symbol,market_data/price_usd");
+            var responseObject = await HttpResponseMessageExtensions.DeserializeJsonToObject<CryptoCurrencyDto>(response, true);
+
+            _shoppingCartRepository.AddCartItem(email, shoppingCartItem, responseObject.Price_Usd);
         }
 
         public void RemoveCartItem(string email, int id)

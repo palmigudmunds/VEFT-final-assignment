@@ -52,7 +52,7 @@ namespace Cryptocop.Software.API.Repositories.Implementations
             var entity = new ShoppingCartItem
             {
                 ShoppingCartId = user.ShoppingCart.Id,
-                ProductIdentifier = shoppingCartItem.ProductIdentifier,
+                ProductIdentifier = shoppingCartItem.ProductIdentifier.ToUpper(),
                 Quantity = shoppingCartItem.Quantity,
                 UnitPrice = priceInUsd
             };
