@@ -21,7 +21,6 @@ namespace Cryptocop.Software.API.Repositories.Implementations
         public IEnumerable<OrderDto> GetOrders(string email)
         {
             var orders = _dbContext.Orders.Where(o => o.Email == email);
-            if (orders == null) { throw new System.Exception("Order with the email " + email +  " not found."); }
             
             return orders.Select(o => new OrderDto
             {

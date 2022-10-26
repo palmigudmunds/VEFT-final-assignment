@@ -4,11 +4,11 @@ namespace Cryptocop.Software.API.Models.InputModels
 {
     public class PaymentCardInputModel
     {
-        [Required(ErrorMessage = "Cardholder name is required.")]
+        [Required]
         [MinLength(3, ErrorMessage = "Cardholder name must be at least 3 characters long.")]
         public string CardholderName { get; set; }
 
-        [Required(ErrorMessage = "Card number is required.")]
+        [Required]
         [CreditCard(ErrorMessage = "Invalid credit card number.")]
         public string CardNumber { get; set; }
 

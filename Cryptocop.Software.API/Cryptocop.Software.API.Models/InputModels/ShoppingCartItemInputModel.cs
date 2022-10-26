@@ -8,6 +8,7 @@ namespace Cryptocop.Software.API.Models.InputModels
         public string ProductIdentifier { get; set; }
 
         [Required]
-        public float? Quantity { get; set; } = null;
+        [Range(0.009999999, float.MaxValue, ErrorMessage = "The field Quantity must be between 0.01 and 3.4028234663852886E+38.")]
+        public float Quantity { get; set; } // TODO: Change to nullable float?
     }
 }
