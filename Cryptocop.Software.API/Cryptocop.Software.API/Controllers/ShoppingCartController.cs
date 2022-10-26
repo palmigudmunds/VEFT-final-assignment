@@ -42,7 +42,7 @@ namespace Cryptocop.Software.API.Controllers
 
         [HttpPatch]
         [Route("{id:int}")]
-        public IActionResult UpdateCartItemQuantity(int id, float quantity)
+        public IActionResult UpdateCartItemQuantity(int id, float quantity) // TODO: Fix quantity
         {
             _shoppingCartService.UpdateCartItemQuantity(User.Identity.Name, id, quantity);
             return Ok();
