@@ -5,6 +5,7 @@ using System.Text.RegularExpressions;
 using Cryptocop.Software.API.Models.Dtos;
 using Cryptocop.Software.API.Models.Entities;
 using Cryptocop.Software.API.Models.InputModels;
+using Cryptocop.Software.API.Repositories.Helpers;
 using Cryptocop.Software.API.Repositories.Interfaces;
 
 namespace Cryptocop.Software.API.Repositories.Implementations
@@ -67,9 +68,7 @@ namespace Cryptocop.Software.API.Repositories.Implementations
 
             // Masking credit card number
             var cardNumber = paymentCard.CardNumber;
-            var lastDigits = cardNumber.Substring(cardNumber.Length - 4, 4);
-            var requiredMask = new String('X', cardNumber.Length - lastDigits.Length);
-            var maskedCreditCard = string.Concat(requiredMask, lastDigits);
+            var maskedCreditCard = PaymentCardHelper.MaskPaymentCard(paymentCard.CardNumber);
 
             var orderEntity = new Order
             {

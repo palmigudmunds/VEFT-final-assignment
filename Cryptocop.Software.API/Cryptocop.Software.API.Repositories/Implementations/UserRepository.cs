@@ -1,11 +1,9 @@
-﻿using System;
-using System.Linq;
-using System.Text;
+﻿using System.Linq;
 using Cryptocop.Software.API.Models.Dtos;
 using Cryptocop.Software.API.Models.Entities;
 using Cryptocop.Software.API.Models.InputModels;
 using Cryptocop.Software.API.Repositories.Interfaces;
-using Microsoft.AspNetCore.Cryptography.KeyDerivation;
+using Cryptocop.Software.API.Repositories.Helpers;
 
 namespace Cryptocop.Software.API.Repositories.Implementations
 {
@@ -13,7 +11,6 @@ namespace Cryptocop.Software.API.Repositories.Implementations
     {
         private readonly CryptocopDbContext _dbContext;
         private readonly ITokenRepository _tokenRepository;
-        private string _salt = "00209b47-08d7-475d-a0fb-20abf0872ba0";
 
         public UserRepository(CryptocopDbContext dbContext, ITokenRepository tokenRepository)
         {
@@ -26,7 +23,7 @@ namespace Cryptocop.Software.API.Repositories.Implementations
             {
                 FullName = inputModel.FullName,
                 Email = inputModel.Email,
-                HashedPassword = HashPassword(inputModel.Password)
+                HashedPassword = HashingHelper.HashPassword(inputModel.Password)
             };
 
             _dbContext.Users.Add(entity);
@@ -47,7 +44,7 @@ namespace Cryptocop.Software.API.Repositories.Implementations
         {
             var user = _dbContext.Users.FirstOrDefault(u => 
                 u.Email == loginInputModel.Email &&
-                u.HashedPassword == HashPassword(loginInputModel.Password));
+                u.HashedPassword == HashingHelper.HashPassword(loginInputModel.Password));
 
             if (user == null) { return null; }
 
@@ -63,18 +60,5 @@ namespace Cryptocop.Software.API.Repositories.Implementations
                 TokenId = token.Id
             };
         }
-
-        private string HashPassword(string password)
-        {
-            return Convert.ToBase64String(KeyDerivation.Pbkdf2(
-            password: password,
-            salt: CreateSalt(),
-            prf: KeyDerivationPrf.HMACSHA1,
-            iterationCount: 10000,
-            numBytesRequested: 256 / 8));
-        }
-
-        private byte[] CreateSalt() =>
-            Convert.FromBase64String(Convert.ToBase64String(Encoding.UTF8.GetBytes(_salt)));
     }
 }

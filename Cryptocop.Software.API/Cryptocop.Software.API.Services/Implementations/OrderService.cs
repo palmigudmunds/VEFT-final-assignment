@@ -10,11 +10,13 @@ namespace Cryptocop.Software.API.Services.Implementations
     {
         private readonly IOrderRepository _orderRepository;
         private readonly IShoppingCartRepository _shoppingCartRepository;
+        private readonly IQueueService _queueService;
 
-        public OrderService(IOrderRepository orderRepository, IShoppingCartRepository shoppingCartRepository)
+        public OrderService(IOrderRepository orderRepository, IShoppingCartRepository shoppingCartRepository, IQueueService queueService)
         {
             _orderRepository = orderRepository;
             _shoppingCartRepository = shoppingCartRepository;
+            _queueService = queueService;
         }
 
         public IEnumerable<OrderDto> GetOrders(string email)
@@ -27,6 +29,7 @@ namespace Cryptocop.Software.API.Services.Implementations
             var newOrder = _orderRepository.CreateNewOrder(email, order);
             _shoppingCartRepository.DeleteCart(email);
             // TODO: Publish a message to RabbitMQ with the routing key ‘create-order’ and include the newly created order
+            _queueService.PublishMessage("create-order", newOrder);
         }
     }
 }
