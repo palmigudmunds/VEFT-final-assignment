@@ -1,20 +1,24 @@
 using System;
-using System.Text.Json.Serialization;
-
+using Newtonsoft.Json;
 namespace Cryptocop.Software.API.Models.Dtos
 {
     public class ExchangeDto
     {
         public string Id { get; set; }
 
-        public string Exchange_Name { get; set; }
+        [JsonProperty("exchange_name")]
+        public string Name { get; set; }
 
-        public string Exchange_Slug { get; set; }
+        [JsonProperty("exchange_slug")]
+        public string Slug { get; set; }
 
-        public string Base_Asset_Symbol { get; set; }
+        [JsonProperty("base_asset_symbol")]
+        public string AssetSymbol { get; set; }
 
-        public float? Price_Usd { get; set; } = null!;
+        [JsonProperty("price_usd")]
+        public float? PriceInUsd { get; set; } = null!;
 
-        public DateTime? Last_Trade_At { get; set; } = null!;
+        [JsonProperty("last_trade_at")]
+        public DateTime? LastTrade { get; set; } = null!;
     }
 }

@@ -46,7 +46,7 @@ namespace Cryptocop.Software.API.Services.Implementations
             var response = await _httpClient.GetAsync("https://data.messari.io/api/v1/assets/" + symbol + "/metrics?fields=symbol,market_data/price_usd");
             var responseObject = await HttpResponseMessageExtensions.DeserializeJsonToObject<CryptoCurrencyDto>(response, true);
 
-            _shoppingCartRepository.AddCartItem(email, shoppingCartItem, responseObject.Price_Usd);
+            _shoppingCartRepository.AddCartItem(email, shoppingCartItem, responseObject.PriceInUsd);
         }
 
         public void RemoveCartItem(string email, int id)
