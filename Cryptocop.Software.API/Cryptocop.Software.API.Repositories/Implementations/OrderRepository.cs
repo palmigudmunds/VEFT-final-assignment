@@ -116,7 +116,15 @@ namespace Cryptocop.Software.API.Repositories.Implementations
                 CardholderName = orderEntity.CardholderName,
                 CreditCard = cardNumber,
                 OrderDate = orderEntity.OrderDate,
-                TotalPrice = orderEntity.TotalPrice
+                TotalPrice = orderEntity.TotalPrice,
+                OrderItems = orderEntity.OrderItems.Select(oi => new OrderItemDto
+                {
+                    Id = oi.Id,
+                    ProductIdentifier = oi.ProductIdentifier,
+                    Quantity = oi.Quantity,
+                    UnitPrice = oi.UnitPrice,
+                    TotalPrice = oi.TotalPrice
+                }).ToList()
             };
         }
     }
