@@ -1,0 +1,2 @@
+
+Log: {"id":39,"email":"palmigudm2001@gmail.com","fullName":"P\u00E1lmi Gu\u00F0mundsson","streetName":"Frostafold","houseNumber":"23","zipCode":"112","country":"is","city":"Reykjav\u00EDk","cardholderName":"P\u00E1lmi Gu\u00F0mundsson","creditCard":"4432694374463370","orderDate":"29.10.2022","totalPrice":10374.677,"orderItems":[{"id":62,"productIdentifier":"BTC","quantity":0.5,"unitPrice":20749.354,"totalPrice":10374.677}]}

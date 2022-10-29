@@ -1,7 +1,10 @@
 ﻿using System.Text;
 using Microsoft.Extensions.Configuration;
+using CreditCardValidator;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
+using Helpers;
+using Models.Dtos;
 
 var configuration = new ConfigurationBuilder()
     .AddJsonFile("appsettings.json")
@@ -24,7 +27,7 @@ using var connection = connectionFactory.CreateConnection();
 using var channel = connection.CreateModel();
 
 channel.QueueDeclare(queue, true);
-channel.QueueBind(queue, exchange, "new-order");
+channel.QueueBind(queue, exchange, "create-order");
 
 var consumer = new EventingBasicConsumer(channel);
 
@@ -35,11 +38,20 @@ consumer.Received += (model, ea) =>
     Console.WriteLine($" [x] Received '{routingKey}'");
 
     var body = ea.Body.ToArray();
-    var message = Encoding.UTF8.GetString(body);
+    var order = Encoding.UTF8.GetString(body);
 
-    // TODO: Log to log.txt
-    using StreamWriter file = new("log.txt", append: true);
-    file.WriteLine("\nLog: " + message);
+    var orderObject = JsonSerializerHelper.DeserializeWithCamelCasing<OrderDto>(order);
+
+    CreditCardDetector detector = new CreditCardDetector(orderObject.CreditCard);
+
+    if (detector.IsValid())
+    {
+        Console.WriteLine($" [x] Valid Credit Card");
+    }
+    else
+    {
+        Console.WriteLine($" [x] Invalid Credit Card");
+    }
 
     Console.WriteLine($" [x] Processed '{routingKey}'");
 };

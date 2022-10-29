@@ -6,7 +6,7 @@ connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
 channel = connection.channel()
 exchange_name = 'order_exchange'
 create_order_routing_key = 'create-order'
-email_queue_name = 'email_queue'
+email_queue_name = 'email-queue'
 email_template = '<h2>Thank you for ordering!</h2><p>We hope you will enjoy our lovely products and don\'t hesitate to contact us if there are any questions.</p><table><thead><tr style="background-color: rgba(155, 155, 155, .2)"><th>Name</th><th>Address</th><th>City</th><th>Zipcode</th><th>Country</th><th>Date of order</th><th>Total price</th></tr></thead><tbody>%s</tbody></table>'
 
 # Declare the exchange, if it doesn't exist
