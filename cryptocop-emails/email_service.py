@@ -1,9 +1,7 @@
 import pika
 import requests
 import json
-import time
 
-# time.sleep(8) # Wait for rabbitmq to start
 connection = pika.BlockingConnection(pika.ConnectionParameters('rabbitmq'))
 channel = connection.channel()
 exchange_name = 'order_exchange'
