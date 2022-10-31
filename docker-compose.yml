@@ -1,0 +1,34 @@
+version: "3.8"
+
+services:
+
+    rabbitmq:
+      image: rabbitmq:3-management
+      ports:
+        - 5672:5672
+        - 15672:15672
+
+    cryptocop-software-api:
+      build:
+        context: ./Cryptocop.Software.API
+        dockerfile: Dockerfile
+      restart: on-failure
+      depends_on:
+        - rabbitmq
+      ports:
+        - "5001:5001"
+
+    cryptocop-payment-service:
+      build:
+        context: ./cryptocop-payments
+        dockerfile: Dockerfile
+      restart: on-failure
+      depends_on:
+        - rabbitmq
+
+    cryptocop-email-service:
+      # platform: linux/amd64
+      build: ./cryptocop-emails
+      restart: on-failure
+      depends_on:
+        - rabbitmq

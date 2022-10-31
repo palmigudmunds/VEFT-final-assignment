@@ -8,11 +8,6 @@ using Cryptocop.Software.API.Repositories.Implementations;
 using Cryptocop.Software.API.Repositories.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Cryptocop.Software.API.Middlewares;
-using RabbitMQ.Client;
-using RabbitMQ.Client.Events;
-using System.Text;
-using FloatAway.Gateway.Services.Helpers;
-using Cryptocop.Software.API.Models.Dtos;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -68,51 +63,10 @@ builder.Services.AddControllers().AddJsonOptions(options => {
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// RabbitMQ connections
-// var configuration = new ConfigurationBuilder()
-//     .AddJsonFile("appsettings.json")
-//     .Build();
-
-// var configSection = configuration.GetSection("RabbitMQ");
-
-// var host = configSection.GetValue<string>("Host");
-// var exchange = configSection.GetValue<string>("Exchange");
-// var queue = configSection.GetValue<string>("Queue");
-// var routingKey = configSection.GetValue<string>("RoutingKey");
-
-// IAsyncConnectionFactory connectionFactory = new ConnectionFactory
-// {
-//     HostName = host
-// };
-
-// using var connection = connectionFactory.CreateConnection();
-// using var channel = connection.CreateModel();
-
-// channel.QueueDeclare(queue, true);
-// channel.QueueBind(queue, exchange, "create-order");
-
-// Console.WriteLine(" [*] Waiting for new orders. To exit press CTRL+C");
-
-// var consumer = new EventingBasicConsumer(channel);
-
-// consumer.Received += (model, ea) =>
-// {
-//     var routingKey = ea.RoutingKey;
-
-//     Console.WriteLine($" [x] Received '{routingKey}'");
-
-//     var body = ea.Body.ToArray();
-//     var message = Encoding.UTF8.GetString(body);
-
-//     var inputModel = JsonSerializerHelper.DeserializeWithCamelCasing<OrderDto>(message);
-//     if (inputModel == null) { throw new Exception("The order cannot be null."); }
-
-//     Console.WriteLine($" [x] Processed '{routingKey}'");
-// };
-// channel.BasicConsume(queue, autoAck: true, consumer: consumer);
-
-// Console.WriteLine(" Press [enter] to exit.");
-// Console.ReadLine();
+if (Environment.GetEnvironmentVariable("DOTNET_RUNNING_IN_CONTAINER") == "true")
+{
+    builder.WebHost.ConfigureKestrel(options => { options.ListenAnyIP(5001); });
+}
 
 var app = builder.Build();
 
@@ -123,7 +77,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+// app.UseHttpsRedirection();
 
 app.UseAuthentication();
 

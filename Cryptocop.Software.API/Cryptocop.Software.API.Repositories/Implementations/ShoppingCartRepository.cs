@@ -22,6 +22,8 @@ namespace Cryptocop.Software.API.Repositories.Implementations
 
             var userShoppingCart = _dbContext.ShoppingCarts.FirstOrDefault(sc => sc.UserId == user.Id);
 
+            if (userShoppingCart == null) { throw new System.Exception("Shopping cart for user with email " + email + " not found."); }
+
             var cartItems = _dbContext
                             .ShoppingCartItems
                             .Where(sci => sci.ShoppingCartId == userShoppingCart.Id)
