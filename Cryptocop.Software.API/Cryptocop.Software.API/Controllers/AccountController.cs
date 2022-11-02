@@ -32,11 +32,11 @@ namespace Cryptocop.Software.API.Controllers
         [Route("signin")]
         public IActionResult AuthenticateUser([FromBody] LoginInputModel login)
         {
-            // TODO: Call a authentication service
+            // Call a authentication service
             var user = _accountService.AuthenticateUser(login);
             if (user == null) { return Unauthorized(); }
             
-            // TODO: Return a valid JWT token
+            // Return a valid JWT token
             var token = _tokenService.GenerateJwtToken(user);
             return Ok(token);
         }
@@ -45,7 +45,7 @@ namespace Cryptocop.Software.API.Controllers
         [Route("signout")]
         public IActionResult Logout()
         {
-            // TODO: Retrieve token id from claim and blacklist token
+            // Retrieve token id from claim and blacklist token
             int.TryParse(User.Claims.FirstOrDefault(c => c.Type == "tokenId").Value, out var tokenId);
             _accountService.Logout(tokenId);
             return NoContent();

@@ -7,8 +7,6 @@
 
 **/obj
 
-TechnicalRadiation.Api/news.db
-
 # User-specific files
 *.rsuser
 *.suo

@@ -28,7 +28,8 @@ namespace Cryptocop.Software.API.Services.Implementations
         {
             var newOrder = _orderRepository.CreateNewOrder(email, order);
             _shoppingCartRepository.DeleteCart(email);
-            // TODO: Publish a message to RabbitMQ with the routing key ‘create-order’ and include the newly created order
+            
+            // Publish a message to RabbitMQ with the routing key ‘create-order’ and include the newly created order
             _queueService.PublishMessage("create-order", newOrder);
         }
     }

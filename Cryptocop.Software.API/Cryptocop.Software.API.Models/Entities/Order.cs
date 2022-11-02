@@ -26,7 +26,7 @@ public class Order
 
     public string MaskedCreditCard { get; set; }
 
-    public string OrderDate { get; set; } // TODO: Change to timestamp?
+    public string OrderDate { get; set; }
 
     public float TotalPrice { get; set; }
 

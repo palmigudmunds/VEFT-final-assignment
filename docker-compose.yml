@@ -17,7 +17,7 @@ services:
       build:
         context: ./Cryptocop.Software.API
         dockerfile: Dockerfile
-      restart: on-failure
+      # restart: on-failure
       depends_on:
         - rabbitmq
       ports:

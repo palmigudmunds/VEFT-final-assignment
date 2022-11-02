@@ -1,8 +1,15 @@
 import pika
 import requests
 import json
+from retry import retry
 
-connection = pika.BlockingConnection(pika.ConnectionParameters('rabbitmq'))
+
+@retry(pika.exceptions.AMQPConnectionError, delay=5, jitter=(1, 3))
+def get_connection():
+    connection = pika.BlockingConnection(pika.ConnectionParameters("rabbitmq"))
+    return connection
+
+connection = get_connection()
 channel = connection.channel()
 exchange_name = 'order_exchange'
 create_order_routing_key = 'create-order'
